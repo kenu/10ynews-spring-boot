@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>10년전 오늘</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}"/>
 </head>
 <body>
-
+<h1>10년전 오늘</h1>
+<p><b>역사를 잊은 민족에게 미래는 없다</b> - 단재 신채호</p>
+<div>
+    <a th:href="@{|https://www.google.com/search?q=${query}|}" th:text="${today}" target="_blank"></a>
+    <nav><a href="https://okdevtv.com">okdevtv</a> |
+        <a href="https://github.com/kenu/10ynews">GitHub</a> |
+        <a href="https://github.com/platanus-kr/10ynews-spring-boot">Fork</a> |
+        <a href="https://okky.kr">okky</a>
+    </nav>
+</div>
 </body>
 </html>
