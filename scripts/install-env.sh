@@ -4,7 +4,6 @@ REPOSITORY=~/git/10ynews-spring-boot
 
 ## install git, java
 sudo amazon-linux-extras install -y java-openjdk11
-sleep 3
 sudo yum install -y git
 
 ## git clone
@@ -14,7 +13,7 @@ git clone $GITHUB
 
 ## build jar
 cd $REPOSITORY
-./gradlew jar
+./gradlew build && echo "build."
 
 JAR_NAME=$(ls $REPOSITORY/build/libs | grep jar | head -n 1)
 JAR_PATH=$REPOSITORY/build/libs/$JAR_NAME
