@@ -31,6 +31,6 @@ sudo systemctl enable nginx
 sudo mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.orig
 sudo sh -c "sed '38,87d' /etc/nginx/nginx.conf.orig > /etc/nginx/nginx.conf"
 cd /etc/nginx/conf.d
-sudo curl -O ~~~~~~~~~~~~~~~~~
+sudo curl -O https://raw.githubusercontent.com/platanus-kr/10ynews-spring-boot/master/scripts/10years.conf
 sleep 2
 sudo systemctl start nginx
