@@ -14,7 +14,7 @@ git clone $GITHUB
 
 ## build jar
 cd $REPOSITORY
-sh gradlew build
+./gradlew build
 
 JAR_NAME=$(ls $REPOSITORY/build/libs | grep jar | head -n 1)
 JAR_PATH=$REPOSITORY/build/libs/$JAR_NAME
