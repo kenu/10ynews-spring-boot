@@ -14,12 +14,7 @@ git clone $GITHUB
 
 ## build jar
 cd $REPOSITORY
-run_gradlew()
-{
-  sh ~/git/10ynews-spring-boot/gradlew build
-}
-run_gradlew
-
+./gradlew build | echo
 
 JAR_NAME=$(ls $REPOSITORY/build/libs | grep jar | head -n 1)
 JAR_PATH=$REPOSITORY/build/libs/$JAR_NAME
