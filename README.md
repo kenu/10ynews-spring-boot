@@ -17,5 +17,5 @@ java -jar build/libs/tenynews-0.0.1-SNAPSHOT.jar
 ## EC2 install
 * AMI Linux 2 instance with 80 port open in Security Group
 * First install env with git, Java 11, nginx
-* `curl -L https://raw.githubusercontent.com/platanus-kr/10ynews-spring-boot/master/scripts/install-env.sh | sh`
+* `curl -o install-env.sh -L https://raw.githubusercontent.com/platanus-kr/10ynews-spring-boot/master/scripts/install-env.sh && sh install-env.sh && rm -rf install-env.sh`
 * Open instance public ip in browser
