@@ -4,6 +4,7 @@ REPOSITORY=~/git/10ynews-spring-boot
 
 ## install git, java
 sudo amazon-linux-extras install -y java-openjdk11
+sleep 3
 sudo yum install -y git
 
 ## git clone
@@ -11,17 +12,14 @@ mkdir ~/git
 cd ~/git
 git clone $GITHUB
 
-## chmod +x scripts
-#cp $REPOSITORY/scripts/deploy-10ynews.sh ~
-#chmod +x ~/deploy-10ynews.sh
-cd 10ynews-spring-boot
+## build jar
+cd $REPOSITORY
 sh gradlew build
 
 JAR_NAME=$(ls $REPOSITORY/build/libs | grep jar | head -n 1)
 JAR_PATH=$REPOSITORY/build/libs/$JAR_NAME
 nohup java -jar $JAR_PATH > /dev/null 2> /dev/null < /dev/null &
 sleep 10
-
 
 ## install nginx
 sudo amazon-linux-extras install -y nginx1.12
